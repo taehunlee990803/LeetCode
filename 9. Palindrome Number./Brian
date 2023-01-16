@@ -1,0 +1,35 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int temp = x;
+        int x1 = x;
+
+        int i = 0;
+        long int reverse = 0;
+    
+        if(x < 0)
+        {
+            return false;
+        }
+        else
+        {
+            while(x1>0)
+            {
+                
+                reverse = x1%10 + reverse*10;
+                x1 = x1/10;
+            }
+
+               if(reverse == x)
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
+        }
+    }
+
+    
+};
