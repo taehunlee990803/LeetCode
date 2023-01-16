@@ -1,0 +1,38 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        bool result = false;
+        long int sum_result = 0;
+        int num;
+    
+    while(result == false)
+    {
+     
+     sum_result = 0;
+        while(n>0)
+        {
+           num = n%10;
+           sum_result += (num*num);
+           n = n/10;
+        }
+        if(sum_result>=1 && sum_result<=9)
+        {
+
+            if(sum_result == 1 || sum_result == 7)
+            {   
+                result = true;
+                break;
+            }
+            else
+            {
+                result = false;
+                break;
+            }
+         }   
+        
+        n = sum_result;
+    }
+    return result;
+
+    }
+};
