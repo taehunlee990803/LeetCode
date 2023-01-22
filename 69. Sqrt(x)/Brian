@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int mySqrt(int x) {
+        int result;
+        int temp;
+        
+        if(x == 0)
+            return 0;
+
+
+        for(long int i =1;i<=x;i++)
+        {
+            if( i*i > x)
+            {
+                result = i-1;
+                break;
+            }
+            if(i*i == x)
+            {
+                result = i;
+                break;
+            }
+        }
+        return result;
+
+    }
+};
