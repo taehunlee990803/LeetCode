@@ -16,20 +16,12 @@ class Solution(object):
         while pointer:
             pointer = pointer.next
             count+=1
-        print(count)
-        if count%2 == 0:
-            count = int(count/2)+1
-            print("even",count)
-            while temp != count:
-                head = head.next
-                temp+=1
-        else:
-            count = int(count/2)+1
-            print("odd",count)
-  
-            while temp != count:
-                head = head.next
-                temp+=1
-        print(temp)
+            
+
+        count = int(count/2)+1
+        while temp != count:
+            head = head.next
+            temp+=1
+   
         return head
             
