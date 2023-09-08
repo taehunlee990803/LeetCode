@@ -15,4 +15,9 @@ class Solution(object):
             new_arr.append(current_node.val)
             current_node = current_node.next
         
-        return new_arr == new_arr[::-1]
+        end = len(new_arr)
+        for i in range(0,len(new_arr)):
+            if new_arr[i] != new_arr[end-1]:
+                return False
+            end -=1 
+        return True
