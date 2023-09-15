@@ -9,8 +9,7 @@ class Solution(object):
         find = True
         nums1_length = len(nums1)
         nums2_length = len(nums2)
-        
-        temp_1 = 0
+      
          
         # for i in range(0,len(nums1)):
         #     find = True
@@ -25,13 +24,12 @@ class Solution(object):
         #                 result.append(-1)
         temp_index = 0
         for i in range(0,nums1_length):
-            temp_1 = nums1[i]
+         
             find = True
-            temp_index = nums2.index(temp_1)
-            
+            temp_index = nums2.index(nums1[i])
+    
             for j in range(temp_index, nums2_length):
-                
-                if nums2[j] > temp_1:
+                if nums2[j] > nums1[i]:
                     result.append(nums2[j])
                     find = False
                     break
