@@ -11,7 +11,6 @@ class Solution(object):
         nums2_length = len(nums2)
         
         temp_1 = 0
-        temp_2 = 0
          
         # for i in range(0,len(nums1)):
         #     find = True
@@ -31,9 +30,9 @@ class Solution(object):
             temp_index = nums2.index(temp_1)
             
             for j in range(temp_index, nums2_length):
-                temp_2 = nums2[j]
-                if temp_2 > temp_1:
-                    result.append(temp_2)
+                
+                if nums2[j] > temp_1:
+                    result.append(nums2[j])
                     find = False
                     break
             if find is True:
