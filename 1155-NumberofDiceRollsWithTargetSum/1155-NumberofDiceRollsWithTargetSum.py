@@ -1,7 +1,7 @@
-                    # else:
-                    #     new_dict[temp] += 1
-                    #     new_dict[temp] = 1
-                    # if temp in new_dict:
+····················#·else:
+····················#·····new_dict[temp]·=·1·+·dict_sum[element]
+····················#·····new_dict[temp]·=·1
+                   ·#·if·temp·in·new_dict:
                     # temp = element + i
                     # new_dict[temp] = (new_dict.get(temp, 0) + dict_sum[element]) % output
                     #  for i in range(1, k+1):
