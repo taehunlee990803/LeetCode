@@ -3,26 +3,27 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        count0 = 0
-        count1 = 0
-        count2 = 0
+        # count1 = 0
+        # count2 = 0
 
-        for num in nums:
-            if num == 0: count0 += 1
-            elif num == 1: count1 += 1
-            else: count2 += 1
+        # for num in nums:
+        #     if num == 0: count0 += 1
+        #     elif num == 1: count1 += 1
+        l, r = 0, len(nums)-1
+        i = 0 
+        def swap(i,j):
+            tmp = nums[i]
+            nums[i] = nums[j]
+        # count0 = 0
+            nums[j] = tmp
+        while i <= r:
+            if nums[i] == 0:
+                swap(l, i)
+                l += 1
+            elif nums[i] == 2:
+                swap(i, r)
+                r -= 1
+                i -= 1 
+            i += 1
 
-        arr = []
-        for i in range(0,count0):
-            arr.append(0)
-        for i in range(0,count1):
-            arr.append(1)
-        for i in range(0,count2):
-            arr.append(2)
-
-
-        for i in range(0,len(arr)):
-
-            nums[i] = arr[i]
-     
 [
