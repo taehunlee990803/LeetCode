@@ -6,6 +6,9 @@ class Solution:
             if target in element:
                 return True
             prev = element[-1]
+
             
+            if target < prev:
+                return False
         return False
 [
