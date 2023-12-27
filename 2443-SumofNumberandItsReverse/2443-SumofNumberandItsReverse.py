@@ -1,23 +1,22 @@
-            # left_dic = Counter(str(temp))
-            # right_dic = Counter(str(i))
     
-            left_dic = Counter(str(temp))
-            right_dic = Counter(str(i))
+        # if num == 0 or num == 2:
+    def sumOfNumberAndReverse(self, num: int) -> bool:
+class Solution:
+        #     return True
+        # for i in range(1,num):
+        #     temp = str(num - i)
+        #     temp_rev = temp[::-1]
+        #     if int(temp_rev) + i == num:
+        #         print(i, temp)
+        #         return True
+        # return False
 
-            if len(left_dic) > len(right_dic):
-                dif = len(left_dic) - len(right_dic)
-                right_dic['0'] = dif
-
-            if right_sum == left_sum and left_dic == right_dic:
-            elif len(left_dic) < len(right_dic):
-                dif =  len(right_dic) - len(left_dic)
-                left_dic['0'] = dif
-            
-            right_sum = sum(int(digit) for digit in str(i))
-            left_sum = sum(int(digit) for digit in str(temp))
-            temp = num - i
-        for i in range(1,num):
+        for i in range(0, num+1):
+            temp = str(i)
+            temp = temp[::-1]
+            temp = int(temp)
+            if i + temp == num:
                 return True
-
         return False
-4
+        
+2
