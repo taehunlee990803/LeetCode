@@ -1,17 +1,16 @@
-                temp = neededTime[element]
-            if neededTime[element] <= neededTime[element+1]:
-        for element in container:
-        print(container)
-                neededTime[element] = neededTime[element+1]
-                
-            else:
-                temp = neededTime[element+1]
-                neededTime[element+1] = neededTime[element]
-            # temp = min(neededTime[element], neededTime[element+1])
-            minimum += temp
-            print(temp)
-            # print(minimum)
-        return minimum
-
-
-"
+class Solution:
+    def minCost(self, colors: str, neededTime: List[int]) -> int:
+        minimum = 0
+        # neededTime./sort()
+        l =0
+        r = len(neededTime)-1
+        count = 0
+        container = []
+        for i in range(0,len(neededTime)-1):
+            if colors[i] == colors[i+1]:
+                container.append(i)
+"abaac"
+[1,2,3,4,5]
+"abc"
+[1,2,3]
+"aabaa"
