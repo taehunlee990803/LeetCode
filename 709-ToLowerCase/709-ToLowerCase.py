@@ -1,28 +1,21 @@
-        # container.append(temp)
-        # ans = ""
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        capital = 0
+        lower = 0
 
-        # for i in range(len(container)):
-        #     if len(container[i]) > 2:
-        #         for j in range(len(container[i])):
-        #             if j == 0:
-        #                 ans += container[i][0].upper()
-        #             else:
-        #                 ans += container[i][j].lower()
-        #     else:
-        #         for j in range(len(container[i])):
-        #             ans += container[i][j].lower()
-        #     if i is not len(container) - 1:
-        #         ans += " "
-        # return ans
-        ans = []
-        for s in title.split():
-            if len(s) <3:
-                ans.append(s.lower())
+        for element in word:
+            if ord(element) >= 65 and ord(element) <= 90:
+                capital += 1
             else:
-                ans.append(s.capitalize())
-        return ' '.join(ans)
-        
+                lower += 1
 
-"capiTalIze tHe titLe"
-"First leTTeR of EACH Word"
-"i lOve leetcode"
+        if lower == 0 and capital != 0:
+            return True
+        if lower != 0 and capital == 0:
+            return True
+
+        if capital == 1 and (ord(word[0]) >= 65 and ord(word[0]) <= 90):
+            return True
+        print(lower, capital)
+        return False
+"
