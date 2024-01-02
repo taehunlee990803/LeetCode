@@ -1,15 +1,28 @@
-class Solution:
-    def toLowerCase(self, s: str) -> str:
-        
-        
-        
-        s = list(s)
-        # return s.lower()
+        # container.append(temp)
+        # ans = ""
 
+        # for i in range(len(container)):
+        #     if len(container[i]) > 2:
+        #         for j in range(len(container[i])):
+        #             if j == 0:
+        #                 ans += container[i][0].upper()
+        #             else:
+        #                 ans += container[i][j].lower()
+        #     else:
+        #         for j in range(len(container[i])):
+        #             ans += container[i][j].lower()
+        #     if i is not len(container) - 1:
+        #         ans += " "
+        # return ans
+        ans = []
+        for s in title.split():
+            if len(s) <3:
+                ans.append(s.lower())
+            else:
+                ans.append(s.capitalize())
+        return ' '.join(ans)
+        
 
-        for i in range(len(s)):
-            if ord(s[i]) <= 90 and ord(s[i])>= 65:
-                s[i] = chr(ord(s[i])+32)
-        return ''.join(s)
-
-"
+"capiTalIze tHe titLe"
+"First leTTeR of EACH Word"
+"i lOve leetcode"
