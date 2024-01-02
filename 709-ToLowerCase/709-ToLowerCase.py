@@ -1,4 +1,15 @@
 class Solution:
     def toLowerCase(self, s: str) -> str:
-        return s.lower()
+        
+        
+        
+        s = list(s)
+        # return s.lower()
+
+
+        for i in range(len(s)):
+            if ord(s[i]) <= 90 and ord(s[i])>= 65:
+                s[i] = chr(ord(s[i])+32)
+        return ''.join(s)
+
 "
