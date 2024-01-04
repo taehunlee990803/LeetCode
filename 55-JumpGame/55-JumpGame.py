@@ -7,6 +7,8 @@
 
             temp = loc + nums[loc]
 
-            if temp >= destination:
+            if temp == destination:
         return False
+        loc = 0
+        destination = len(nums)-1
 [2,3,1,1,4]
