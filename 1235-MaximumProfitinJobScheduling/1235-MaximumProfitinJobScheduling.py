@@ -1,20 +1,20 @@
-            dp[i] = max(dp[i], dp[i - 1])
-                dp[i] = max(dp[i], dp[prev_job_index] + jobs[i][2])
-
-            if prev_job_index != -1:
-            # Binary search to find the latest non-overlapping job
-            prev_job_index = self.binary_search(jobs, i)
-
-        # Initialize dp array with the profits
-        for i in range(n):
-            dp[i] = jobs[i][2]
-
-        for i in range(1, n):
-        jobs = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])  # Sort jobs by end time
-        n = len(jobs)
-        dp = [0] * n
-
+    #     jobs = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])  # Sort jobs by end time
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+        intervals = sorted(zip(startTime, endTime, profit))
+        cache = {}
+        def dfs(i):
+            if i == len(intervals):
+                return 0
+            
+
+            if i in cache:
+                return cache[i]
+            res = dfs(i+1)
+
+            j = bisect.bisect(intervals, (intervals[i][1], -1,-1))
+            cache[i] = res = max(res, intervals[i][2] + dfs(j))
+            return res
+        return dfs(0)
 
 [1,2,3,3]
