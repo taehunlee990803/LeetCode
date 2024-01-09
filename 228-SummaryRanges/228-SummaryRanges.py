@@ -14,12 +14,13 @@ class Solution:
         final = []
                 final.append(str(element[0]))
             else:
-                container = ""
-                container+=str(element[-1])
-                final.append(container)
-                container+=str(element[0])
-                container+="->"
+                # container = ""
+                # container+=str(element[-1])
+                # final.append(container)
+                # container+=str(element[0])
+                # container+="->"
         if len(nums) == 0:
             return ""
+                final.append(str(element[0]) + '->'  +  str(element[-1]))
         return final
 [0,1,2,4,5,7]
