@@ -1,17 +1,16 @@
-        ans = []
+            if i == 0:
+                ranks[score_positions[sorted_scores[i]]] = "Gold Medal"
+            elif i == 1:
+                ranks[score_positions[sorted_scores[i]]] = "Silver Medal"
+            elif i == 2:
+                ranks[score_positions[sorted_scores[i]]] = "Bronze Medal"
+            else:
+                ranks[score_positions[sorted_scores[i]]] = str(i + 1)
+        
+        # Create the final result list based on the original order of scores
+        result = [ranks[i] for i in range(len(score))]
+        
+        return result
 
-                    container.append(j+1)
-                if temp[j] == score[i]:
-                    break
-       
-            for j in range(len(temp)):
-        for i in range(len(score)):
-        temp.sort(reverse=True)
-        container = []
-        temp = score.copy()
-        for i in range(len(container)):
-            if container[i] == 1:
-                ans.append("Gold Medal")
-            elif container[i] == 2:
-                ans.append("Silver Medal")
+        
 [
