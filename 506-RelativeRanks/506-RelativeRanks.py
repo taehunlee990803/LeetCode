@@ -1,16 +1,16 @@
-            if i == 0:
-                ranks[score_positions[sorted_scores[i]]] = "Gold Medal"
-            elif i == 1:
-                ranks[score_positions[sorted_scores[i]]] = "Silver Medal"
-            elif i == 2:
-                ranks[score_positions[sorted_scores[i]]] = "Bronze Medal"
-            else:
-                ranks[score_positions[sorted_scores[i]]] = str(i + 1)
-        
-        # Create the final result list based on the original order of scores
-        result = [ranks[i] for i in range(len(score))]
-        
-        return result
-
-        
+            rank_dict[s] = "Bronze Medal"
+        elif i == 2:
+            rank_dict[s] = "Silver Medal"
+        else:
+            rank_dict[s] = str(i + 1)
+    
+    # Create a list to store the results
+    result = []
+    
+    # Loop through the input array and append the rank of each score to the result list
+    for s in score:
+        result.append(rank_dict[s])
+    
+    # Return the result list
+    return result
 [
