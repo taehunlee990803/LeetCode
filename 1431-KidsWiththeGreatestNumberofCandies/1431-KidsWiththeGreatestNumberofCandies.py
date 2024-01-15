@@ -1,8 +1,7 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        temp = candies.copy()
-        temp.sort()
-        max_candy = temp[-1]
+  
+        max_candy = max(candies)
         for element in candies:
 
         ans = []
@@ -12,6 +11,5 @@ class Solution:
                 ans.append(True)
             new = element + extraCandies
         
-            print(ans)
         return list(ans)
 [
