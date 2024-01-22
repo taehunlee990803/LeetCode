@@ -9,7 +9,7 @@
         i = 0
         sorted_dic = dict(sorted(dic.items(), key=lambda x: x[0], reverse=True))
         # container.sort(reverse = True)
-        print(dic)
+        # print(dic)
         for element in sorted_dic:
             dic[element].sort(reverse = True)
             for j in range(len(dic[element])):
