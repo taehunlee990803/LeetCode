@@ -7,17 +7,13 @@ class Solution:
         dic_first = Counter(s[:length//2])
         dic_second = Counter(s[length//2:])
         for element in dic_first:
-            if element in lower:
+            if element in lower or element in upper:
                 countFirst += dic_first[element]
-            if element in upper:
-                countFirst += dic_first[element]
+        
         length = len(s)
         for element in dic_second:
-            if element in lower:
+            if element in lower or element in upper:
                 countSecond += dic_second[element]
-            if element in upper:
-                countSecond+= dic_second[element]
-
         
         return countFirst == countSecond
 
