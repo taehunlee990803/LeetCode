@@ -1,21 +1,18 @@
-                dic[temp] = [ num ]
+        #         if i == k:
+        #             return ans 
+        # return ans 
+        arr.sort()
+        mid = arr[(len(arr)-1)//2]
+        ans = []
+        l,r = 0, len(arr)-1
+        while l <= r:
+            if abs(arr[l]-mid) > abs(arr[r]-mid):
+                ans.append(arr[l])
+                l+=1
             else:
-                dic[temp].append(num)
-            if temp in dic:
-          
-                # container.append(temp)
-            # if temp not in container:
-        # print(dic)
-        i = 0
-        sorted_dic = dict(sorted(dic.items(), key=lambda x: x[0], reverse=True))
-        # container.sort(reverse = True)
-        # print(dic)
-        for element in sorted_dic:
-            dic[element].sort(reverse = True)
-            for j in range(len(dic[element])):
-                ans.append(dic[element][j])
-            temp = abs(num - median)
-
-        for num in arr:
-        # container = []
+                ans.append(arr[r])
+                r-=1
+            if len(ans) == k:
+        return ans
+                return ans      
 [
