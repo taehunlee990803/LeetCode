@@ -7,8 +7,7 @@ class Solution:
 
             currentSum = sum(nums[:i])
             if currentSum > current:
-                # maxNum = max(maxNum, currentSum + current)
-            
                 return currentSum + current
-        return maxNum
+
+        return -1
 [
