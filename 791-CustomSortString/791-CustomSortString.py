@@ -15,6 +15,5 @@
                 ans += element * s[element]
         ans += junk
 
-        return ans
-        # for element in 
+class Solution:
 "
