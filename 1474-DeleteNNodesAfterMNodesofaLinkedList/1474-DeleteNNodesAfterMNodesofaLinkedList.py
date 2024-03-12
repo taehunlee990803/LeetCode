@@ -1,25 +1,25 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+        dummy = ListNode(0)
+        dummy.next = head
+        prefix_sum = 0
+        prefix_sums = {0: dummy}
+        current = head
+
+        while current:
+            prefix_sum += current.val
+            if prefix_sum in prefix_sums:
+                to_delete = prefix_sums[prefix_sum].next
+                temp_sum = prefix_sum + to_delete.val
+                while to_delete != current:
+                    del prefix_sums[temp_sum]
+                    to_delete = to_delete.next
+                    temp_sum += to_delete.val
+                prefix_sums[prefix_sum].next = current.next
+            else:
+                prefix_sums[prefix_sum] = current
+
+            current = current.next
+    def removeZeroSumSublists(self, head: Optional[ListNode]) -> Optional[ListNode]:
 class Solution:
-    def deleteNodes(self, head: ListNode, m: int, n: int) -> ListNode:
-        ans_list = ListNode()
-        while head:
-            if tempM > 0:
-        new_list = ans_list
-                new_list.next = ListNode(head.val)
-                tempM-=1
-                new_list = new_list.next
-            if tempM == 0:
-                if tempN > 0:
-                    tempN-= 1
-                elif tempN == 0:
-                    tempM = m
-        tempM = m
-        tempN = n
-                    tempN = n
-        return ans_list.next 
-            head = head.next
+        return dummy.next
+
 [
