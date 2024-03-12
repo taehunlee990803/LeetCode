@@ -5,17 +5,22 @@
 #         self.next = next
 class Solution:
     def frequenciesOfElements(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not head:
-            return head
-        hashmap = defaultdict(int)
-        while head:
-            hashmap[head.val] += 1
-            head = head.next
+        f = collections.Counter()
 
-        rst_head = ListNode()
-        rst = rst_head
-        for a,b in hashmap.items():
-            rst.next = ListNode(val = b)
-            rst = rst.next
-        return rst_head.next
+        new_head = ListNode(-1, head)
+        current = new_head
+
+        while current.next is not None:
+            f[current.next.val] += 1
+            current = current.next
+
+        return_head = ListNode(-1)
+        return_tail = return_head
+
+        for v in f.values():
+            return_tail.next = ListNode(v)
+            return_tail = return_tail.next
+        return return_head.next
+
+
 [
