@@ -4,17 +4,38 @@ class Solution:
             return 0
 
         points.sort(key=lambda x: x[1])  # Sort by end points
-        print(points)
         ans = 1
         current_end = points[0][1]
-
         for balloon in points[1:]:
             start, end = balloon
-            if start > current_end:
                 ans += 1
                 current_end = end
 
         return ans
         # ans = 0
         # points.sort()
-[[10,16],[2,8],[1,6],[7,12]]
+
+        # total = len(points)
+        # temp = 0
+        # first = points[temp][1]
+
+        # for i in range(1, len(points)):
+        #     if points[i][0] <= first and points[i][1] >= first:
+        #         ans += 1
+        #     else:
+        #         first = points[i][1]
+        #     # print(points[i][0], points[i][1], first,ans)
+        #     # if points[i][0] > first or points[i][1] < first:
+        #     #     ans += 1
+        #     #     if i != len(points)-1:
+        #     #         first = points[i+1][1]
+        #     #     else:
+        #     #         return ans+1
+
+
+        #     # if points[i][0] <= first and points[i][1] >= first:
+            if start > current_end:
+        #     #         # ans += 1
+        #     #     # print(points[i][0], points[i][1], first)
+        
+[
