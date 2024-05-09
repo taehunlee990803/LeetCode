@@ -7,13 +7,11 @@
             i += 1
             k -= 1
         return ans 
-        while k > 0:
-            ans += max(happiness[i]-i,0)
-        dec = 0
-        i = 0
+        #         ans += current
+        #     else:
+        #         return ans                
+        #     dec +=1
+        # return ans 
 
-        ans = 0
-        happiness.sort(reverse = True)
-class Solution:
-    def maximumHappinessSum(self, happiness: List[int], k: int) -> int:
+        
 [
