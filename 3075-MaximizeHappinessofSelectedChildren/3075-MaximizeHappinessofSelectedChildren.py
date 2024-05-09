@@ -1,17 +1,19 @@
         # for i in range(k):
-        #     current =  temp[length-1-dec]
-        #     if current-dec >= 0:
-        #         current -= dec
 
-
-            i += 1
             k -= 1
         return ans 
-        #         ans += current
-        #     else:
-        #         return ans                
-        #     dec +=1
-        # return ans 
+        while k > 0:
+            i += 1
+        dec = 0
+        i = 0
 
-        
+class Solution:
+    def maximumHappinessSum(self, happiness: List[int], k: int) -> int:
+        ans = 0
+        happiness.sort(reverse = True)
+            if happiness[i]-i < 0:
+                return ans
+            else:
+                ans += happiness[i]-i
+        #     current =  temp[length-1-dec]
 [
