@@ -1,16 +1,20 @@
-            rank_dict[s] = "Bronze Medal"
-        elif i == 2:
-            rank_dict[s] = "Silver Medal"
-        else:
-            rank_dict[s] = str(i + 1)
-    
-    # Create a list to store the results
-    result = []
-    
-    # Loop through the input array and append the rank of each score to the result list
-    for s in score:
-        result.append(rank_dict[s])
-    
-    # Return the result list
-    return result
+        for i in range(len(score)):
+            temp_score = score[i]
+            for j in range(len(score)):
+                if temp[j] == temp_score:
+                    arr.append(j+1)
+        for i in range(len(score)):
+            if arr[i] == 1:
+                dic.append("Gold Medal")
+            elif arr[i] == 2:
+                dic.append("Silver Medal")
+            elif arr[i] == 3:
+
+        dic = []
+        temp = sorted(score, reverse = True)
+    def findRelativeRanks(self, score: List[int]) -> List[str]:
+class Solution:
+        arr = []
+                dic.append("Bronze Medal")
+            else:
 [
