@@ -7,6 +7,5 @@ class Solution:
 
         for i in range(1,len(new_arr)):
             sum += abs(new_arr[i-1]-new_arr[i])
-            print(sum)
         return sum
 "
