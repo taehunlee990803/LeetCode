@@ -1,22 +1,21 @@
-        words = sentence.split()
-        for word in words:
-            prefix = set()
-            for i in range(len(word)):
-                prefix.add(word[:i+1])
-        ans = []
-            check = 0
+        # for word in words:
+        # words = sentence.split()
+        # ans = []
 
-        # print(dic)
-        # print(prefix)
-        # prefix = sorted(prefix)
-            for t in prefix:
-                if t in dictionary:
-                    ans.append(t)
-            prefix= sorted(prefix)
-                    check = 1
+        # # prefix = sorted(prefix)
+        # # print(prefix)
+        # # print(dic)
+        # prefix = set()
+        # dic = set()
+
+class Solution:
+    def replaceWords(self, dictionary: List[str], sentence: str) -> str:
+        words = sentence.split()
+
+        for i in range(len(words)):
+            for root in dictionary:
+                if words[i].startswith(root):
+                    words[i] = root
                     break
-            if check == 0:
-                ans.append(word)
-        return ' '.join(ans)
-            
+        return ' '.join(words)
 [
