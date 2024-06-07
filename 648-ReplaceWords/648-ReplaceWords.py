@@ -1,4 +1,3 @@
-        # for word in words:
         # words = sentence.split()
         # ans = []
 
@@ -11,11 +10,12 @@
 class Solution:
     def replaceWords(self, dictionary: List[str], sentence: str) -> str:
         words = sentence.split()
-
+        dictionary = sorted(dictionary)
         for i in range(len(words)):
             for root in dictionary:
                 if words[i].startswith(root):
                     words[i] = root
                     break
         return ' '.join(words)
+
 [
