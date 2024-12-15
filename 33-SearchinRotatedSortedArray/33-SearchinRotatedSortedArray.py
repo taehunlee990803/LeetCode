@@ -1,3 +1,7 @@
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        if target not in nums:
+            return -1 
         l = 0
         r = len(nums)-1
 
@@ -14,7 +18,3 @@
             elif nums[m] > target:
                 if nums[l] <= target:
                     r = m - 1
-    def search(self, nums: List[int], target: int) -> int:
-class Solution:
-        if target is not in nums:
-            return -1 
