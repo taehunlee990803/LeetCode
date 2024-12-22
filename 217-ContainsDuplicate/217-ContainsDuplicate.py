@@ -1,14 +1,11 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        dict = {
+        container = {}
 
-        }
-        for element in nums:
-            if element in dict:
-                return True
+        for num in nums:
+            if num not in container:
+                container[num] = 1
             else:
-                dict[element] = 1
+                return True
         return False
-[1,2,3,1]
-[1,2,3,4]
-[1,1,1,3,3,4,3,2,4,2]
+
