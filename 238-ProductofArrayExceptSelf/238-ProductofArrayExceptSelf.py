@@ -1,18 +1,14 @@
-                ans[i] = temp // nums[i]
-            return ans
-        if count == 0:
-            for i in range(len(nums)):
-        elif count == 1:
-            for i in range(len(nums)):
-                if nums[i] !=0:
-                    ans[i] =0
-                else:
-                    ans[i] = temp
-            return ans
-   
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        ans = [1] * length
 
+        for i in range(1, length):
+        length = len(nums)
+            ans[i] = nums[i-1]*ans[i-1]
+
+        for i in range(length-1, -1, -1):
+            ans[i] = ans[i] * R
+        R = 1
+            R *= nums[i]
+        return ans 
             
-        
-        # ans = [0]*len(nums)
-        # total_int = 1
-[
