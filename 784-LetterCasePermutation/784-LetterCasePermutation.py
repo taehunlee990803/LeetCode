@@ -13,7 +13,7 @@
             tmp = []
             # print("C: ", c)
         for c in s:
-            print("Current Output: ", ans)
+            # print("Current Output: ", ans)
             
         return ans 
 
