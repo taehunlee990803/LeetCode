@@ -1,12 +1,20 @@
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        ans = []
-        n = len(nums)
-        for i in range(1 << n):
-            k = []
-            for j in range(n):
-                if ( i & (1 << j) != 0):
-                    k.append(nums[j])
-            ans.append(k)
-        return ans 
-[
+        #     if len(ans) == 0:
+        #         ans.append(element)
+        #         ans.append([])
+        #     else:
+        res = []
+        subset = []
+
+        def dfs(i):
+            if i >= len(nums):
+                res.append(subset.copy())
+                return
+            subset.append(nums[i])
+            dfs(i+1) # left branch
+
+            subset.pop()
+            # decision to include nums[i]
+            dfs(i+1)
+        dfs(0)
+        return res
+
