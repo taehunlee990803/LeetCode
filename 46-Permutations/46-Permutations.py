@@ -1,5 +1,5 @@
         if len(nums) == 1:
-            return nums
+            return [nums[:]]
 
         for i in range(len(nums)):
             n = nums.pop(0)
