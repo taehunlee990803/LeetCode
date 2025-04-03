@@ -1,15 +1,15 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        dict_elements = Counter(nums)
-        # elements = collections.OrderedDict(sorted(dict_elements.items()))
-        # ans = []
-        # for element in elements:
-        #     ans.append(element)
-        answer = []
-        for i in range(0,k):
-            answer.append(elements[-1 - i])
-        return answer
+        count = Counter(nums)
 
-        elements = dict(sorted(dict_elements.items(), key=lambda item: item[1]))
-        elements = list(elements)
-[
+        heap = []
+
+
+
+        for num, freq in count.items():
+            if len(heap) < k:
+                heapq.heappush(heap, (freq, num))
+            elif freq > heap[0][0]:
+                heapq.heapreplace(heap, (freq, num))
+        top_k = [num for freq, num in heap]
+        return top_k
