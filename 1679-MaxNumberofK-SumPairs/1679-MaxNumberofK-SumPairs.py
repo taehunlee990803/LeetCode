@@ -1,19 +1,22 @@
-        nums.sort()
+class Solution:
+    def maxOperations(self, nums: List[int], k: int) -> int:
+        ans = 0
         l = 0
         r = len(nums)-1
-        ans = 0
+
 
         while l < r:
-            temp = nums[l] + nums[r]
-            if temp == k:
+            if currentSum == k:
                 l += 1
                 r -= 1
                 ans += 1
             else:
-                if temp <= k:
-                    l += 1
+                if currentSum > k:
+
+        nums.sort()
+
+            currentSum = nums[l] + nums[r]
+                    r -= 1
                 else:
-                    r -=1 
+                    l += 1
         return ans 
-
-
