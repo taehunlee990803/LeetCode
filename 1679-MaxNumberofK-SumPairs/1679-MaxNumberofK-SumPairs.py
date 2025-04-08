@@ -13,7 +13,7 @@ class Solution:
             else:
                 if currentSum > k:
 
-        nums.sort()
+        # nums.sort()
 
             currentSum = nums[l] + nums[r]
                     r -= 1
