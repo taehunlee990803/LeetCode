@@ -1,17 +1,23 @@
-class Solution:
-    def mergeAlternately(self, word1: str, word2: str) -> str:
         ans = ""
-        word1_len = len(word1)
-        word2_len = len(word2)
-        if word1_len >= word2_len:
-            for i in range(word2_len):
-                ans += word1[i]
+
+
+
+
+
+
+
+
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+class Solution:
+        while l < len(word1) and r < len(word2):
+        l = r = 0
+            ans += word1[l]
+            ans += word2[r]
+            l += 1
+            r += 1
+        if len(word1) < len(word2):
+            ans += word2[r:]
         else:
-                ans += word2[i]
-            ans += word1[i+1:]
-            for i in range(word1_len):
-                ans += word1[i]
-                ans += word2[i]
-            ans += word2[i+1:]
-            
+            ans += word1[l:]
         return ans 
+
