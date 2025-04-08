@@ -1,16 +1,25 @@
 
-        for i in range(k, len(s)):
-            if s[i] in vowels:  # Add new character
-                count += 1
-            if s[i - k] in vowels:  # Remove old character
-                count -= 1
-            max_value = max(max_value, count)
-        
-        return max_value
 
-        max_value = count
+
+
+
+
+
+            count = max(tempCount, count)
+            if s[i+k-1] in vowels:
+                tempCount += 1
+            if s[i-1] in vowels:
+                tempCount -= 1
+            # tempCount = prev
+            print(s[i-1], s[i+k-1])
                 count += 1
-        vowels = ['a', 'e','i','o','u']
+        for i in range(1,len(s)-k+1):
+        for element in temp:
+            if element in vowels:
+        temp = s[:k]
         count = 0
-        for i in range(0,k):
-            if s[i] in vowels:
+    def maxVowels(self, s: str, k: int) -> int:
+        vowels = ['a', 'e','i','o','u']
+        return count 
+        tempCount = count
+
