@@ -1,12 +1,24 @@
-class Solution:
+
     def findMaxAverage(self, nums: List[int], k: int) -> float:
-        current_sum = sum(nums[:k])
-        # Slide the window across the array
-        for i in range(k, len(nums)):
-            max_sum = max(max_sum, current_sum)  # Update max sum if needed
-        
-            current_sum += nums[i] - nums[i - k]  # Add new element, remove old element
-        max_sum = current_sum  # Set max sum initially to the first k-element sum
 
-        return max_sum / k  # Return max average
+class Solution:
 
+        for i in range(1, len(nums)-k+1):
+            currentSum -= nums[i-1]
+        return maxAverage 
+            # currentAverage = 
+        # # len(nums) == 5
+            # print(i)
+            maxAverage = max(maxAverage, currentSum / k)
+        currentSum = sum(nums[:k])
+
+    
+        maxAverage = currentSum/k
+
+
+
+            currentSum += nums[k+i-1]
+
+        # 0,1,1,3,3
+        # i = 0 -> 0 + 1 + 2 + 3 - currentSum
+        # i = 1 -> currentSum - nums[0] + nums[4]
