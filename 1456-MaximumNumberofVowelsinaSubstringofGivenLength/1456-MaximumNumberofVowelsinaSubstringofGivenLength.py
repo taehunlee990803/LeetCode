@@ -8,10 +8,9 @@
             count = max(tempCount, count)
             if s[i+k-1] in vowels:
                 tempCount += 1
-            if s[i-1] in vowels:
                 tempCount -= 1
             # tempCount = prev
-            print(s[i-1], s[i+k-1])
+            if s[i-1] in vowels:
                 count += 1
         for i in range(1,len(s)-k+1):
         for element in temp:
@@ -22,4 +21,5 @@
         vowels = ['a', 'e','i','o','u']
         return count 
         tempCount = count
+
 
