@@ -1,22 +1,22 @@
+        while second:
+
+                if node.right:
+                    first.append(node.right)
+                    first.append(node.left)
+                    left.append(node.val)
+                if node.left:
+                node = first.pop()
+                if not node.left and not node.right:
+        while first:
+            for i in range(len(first)):
+        second = deque([root2])
 
 
-
-        return get_leaves_iterative(root1) == get_leaves_iterative(root2)
-                    if node.right:
-                        stack.append(node.right)
-                        stack.append(node.left)
-                    if node.left:
-                        leaves.append(node.val)
-                    if not node.left and not node.right:
-                if node:
-                node = stack.pop()
-            while stack:
-
-            leaves = []
-            stack = deque([root])
-        def get_leaves_iterative(root):
-        # return False
-        #     return True 
-        # if left == right:
-                
-            return leaves
+        first = deque([root1])
+        left = []
+        right = []
+            for i in range(len(second)):
+                node = second.pop()
+                if not node.left and not node.right:
+                    right.append(node.val)
+                if node.left:
