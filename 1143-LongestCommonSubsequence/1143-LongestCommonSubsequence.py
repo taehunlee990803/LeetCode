@@ -1,15 +1,24 @@
+
+
+
+
+
+
+        #         dp[i][j] = 0
+
+                    dp[i][j] = max(dp[i+1][j], dp[i][j+1])
+        # for i in range(n):
+        #     for j in range(m):
+        for i in range(n-1,-1,-1):
+            for j in range(m-1,-1,-1):
+                if text1[i] == text2[j]:
+                    dp[i][j] = 1 + dp[i+1][j+1]
+                else:
+        n = len(text1)
+        m = len(text2)
+        dp = [[0 for i in range(m+1)] for j in range(n+1)]
+
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        @lru_cache(maxsize = None)
-        def memo_solve (p1, p2):
-            if p1 == len(text1) or p2 == len(text2):
-                return 0
+        return dp[0][0]
 
-
-            if text1[p1] == text2[p2]:
-                return 1 + memo_solve(p1+1, p2+1)
-            else:
-                return max(memo_solve(p1+1, p2), memo_solve(p1, p2+1))
-
-        return memo_solve(0,0)
-"abcde"
