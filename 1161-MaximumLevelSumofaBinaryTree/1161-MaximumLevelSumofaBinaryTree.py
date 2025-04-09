@@ -4,7 +4,6 @@
 
         while stack:
             qLen = len(stack)
-            tempSum = 0
                 node = stack.popleft()
                 if node:
                     tempSum += node.val
@@ -22,4 +21,5 @@
                 print(tempSum, currentLevel)
             for i in range(qLen):
 
-            print(qLen)
+            tempSum = 0
+                    
